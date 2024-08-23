@@ -9,22 +9,47 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h2>قائمة المستخدمين</h2>
-    <ul id="usersList">
-        <!-- سيتم إدراج المستخدمين هنا -->
-    </ul>
+    <div id="loginSection">
+        <h2>تسجيل الدخول</h2>
+        <input type="password" id="passwordInput" placeholder="أدخل كلمة المرور">
+        <button onclick="login()">دخول</button>
+        <p id="errorMessage" style="color: red;"></p>
+    </div>
+
+    <div id="usersSection" style="display: none;">
+        <h2>قائمة المستخدمين</h2>
+        <ul id="usersList">
+            <!-- سيتم إدراج المستخدمين هنا -->
+        </ul>
+    </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var accounts = JSON.parse(localStorage.getItem('accounts')) || [];
-            var usersList = document.getElementById('usersList');
+        // كلمة المرور الثابتة (لأغراض تعليمية فقط)
+        var correctPassword = "sop2003";
 
-            accounts.forEach(function(account) {
-                var listItem = document.createElement('li');
-                listItem.textContent = account.email;
-                usersList.appendChild(listItem);
-            });
-        });
+        function login() {
+            var passwordInput = document.getElementById('passwordInput').value;
+            var errorMessage = document.getElementById('errorMessage');
+
+            if (passwordInput === correctPassword) {
+                // إخفاء قسم تسجيل الدخول وعرض قسم المستخدمين
+                document.getElementById('loginSection').style.display = 'none';
+                document.getElementById('usersSection').style.display = 'block';
+
+                // عرض قائمة المستخدمين
+                var accounts = JSON.parse(localStorage.getItem('accounts')) || [];
+                var usersList = document.getElementById('usersList');
+
+                accounts.forEach(function(account) {
+                    var listItem = document.createElement('li');
+                    listItem.textContent = account.email;
+                    usersList.appendChild(listItem);
+                });
+            } else {
+                // عرض رسالة خطأ
+                errorMessage.textContent = "كلمة المرور غير صحيحة";
+            }
+        }
     </script>
 </body>
 </html>
