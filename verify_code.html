@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إعادة تعيين كلمة المرور</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="auth-container">
+        <h2>إعادة تعيين كلمة المرور</h2>
+        <form id="verifyForm">
+            <label for="verificationCode">رمز التحقق:</label>
+            <input type="text" id="verificationCode" required>
+
+            <label for="newPassword">كلمة المرور الجديدة:</label>
+            <input type="password" id="newPassword" required>
+
+            <label for="confirmPassword">تأكيد كلمة المرور:</label>
+            <input type="password" id="confirmPassword" required>
+
+            <button type="submit">إعادة تعيين</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('verifyForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var verificationCode = document.getElementById('verificationCode').value;
+            var newPassword = document.getElementById('newPassword').value;
+            var confirmPassword = document.getElementById('confirmPassword').value;
+
+            // تحقق من تطابق كلمة المرور
+            if (newPassword !== confirmPassword) {
+                alert('كلمتا المرور غير متطابقتين. يرجى المحاولة مرة أخرى.');
+                return;
+            }
+
+            // إرسال طلب إلى الخادم للتحقق من الرمز وتحديث كلمة المرور
+            // هنا يجب عليك إرسال البيانات إلى الخادم الخاص بك
+            alert('تم إعادة تعيين كلمة المرور بنجاح!');
+            // إعادة توجيه المستخدم إلى صفحة تسجيل الدخول
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+</html>

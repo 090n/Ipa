@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100..900&display=swap" rel="stylesheet">
+    <title>حسابي</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+		
+        body {
+            font-family: 'Noto Sans Arabic', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .account-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #0056b3;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .no-info {
+            color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <div class="account-container">
+        <h1>معلومات الحساب</h1>
+        <div id="accountInfo">
+            <!-- سيتم عرض معلومات المستخدم هنا -->
+        </div>
+    </div>
+
+
+   <script>
+       // قراءة البريد الإلكتروني وكلمة المرور من التخزين المحلي
+       var email = localStorage.getItem('userEmail');
+       var password = localStorage.getItem('userPassword');
+
+       // تتبع القيم
+       console.log('Email:', email);
+       console.log('Password:', password);
+
+       // التحقق من وجود البيانات
+       if (email) {
+           document.getElementById('accountInfo').innerHTML = `
+               <p>البريد الإلكتروني: ${email}</p>
+               ${password ? `<p>الرمز: ${password}</p>` : ''}
+           `;
+       } else {
+           document.getElementById('accountInfo').innerHTML = '<p class="no-info">لم يتم العثور على معلومات الحساب.</p>';
+       }
+   </script>
+   
+</body>
+</html>

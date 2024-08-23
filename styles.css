@@ -1,0 +1,206 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Noto Sans Arabic', sans-serif;
+    background: linear-gradient(135deg, #1a1a1a, #333333); /* خلفية داكنة */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff; /* نص أبيض */
+}
+
+.auth-container {
+    background-color: rgba(255, 255, 255, 0.05); /* لون خلفية شبه شفاف داكن */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); /* تحسين الظل */
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 25px;
+    font-weight: 600;
+    font-size: 1.8em;
+    color: #fff; /* نص أبيض */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #fff; /* أيقونات بيضاء */
+    font-size: 1.2em;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 12px 12px 40px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1); /* خلفية مدخلات داكنة */
+    color: #fff; /* نص أبيض */
+    font-size: 1em;
+}
+
+input::placeholder {
+    color: #bbb; /* لون نص العلامة المائية */
+}
+
+button {
+    padding: 12px;
+    background-color: #555; /* زر داكن */
+    color: #fff; /* نص أبيض */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: #777; /* لون أفتح عند التحويم */
+}
+
+a {
+    color: #bbb; /* لون رابط فاتح */
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #fff; /* لون أبيض عند التحويم */
+}
+
+/* التأكد من تباين جيد للنصوص والألوان الداكنة */
+body {
+    font-family: 'Noto Sans Arabic', sans-serif;
+    background: linear-gradient(135deg, #1a1a1a, #333333);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #e0e0e0; /* لون نص أكثر وضوحًا */
+}
+
+.auth-container {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 25px;
+    font-weight: 600;
+    font-size: 1.8em;
+    color: #e0e0e0; /* لون نص أكثر وضوحًا */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #e0e0e0; /* أيقونات بلون أكثر وضوحًا */
+    font-size: 1.2em;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 12px 12px 40px;
+    border: 1px solid #444; /* حدود خفيفة لإبراز المدخلات */
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #e0e0e0;
+    font-size: 1em;
+}
+
+input::placeholder {
+    color: #888; /* لون علامة مائية أكثر وضوحًا */
+}
+
+button {
+    padding: 12px;
+    background-color: #444; /* زر بلون داكن */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: #666; /* لون أفتح عند التحويم */
+}
+
+a {
+    color: #888; /* لون رابط فاتح */
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #fff; /* لون أبيض عند التحويم */
+}
+
+
+
+.auth-container {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: none; /* إخفاء الظل */
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+
+.auth-container {
+    background-color: transparent; /* جعل الخلفية شفافة */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: none; /* إخفاء الظل */
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
